@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Dia's Navigation Logs]]></title>
-  <link href="http://DianthuDia.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Titanium | Dia's Navigation Logs]]></title>
+  <link href="http://DianthuDia.github.com/blog/categories/titanium/atom.xml" rel="self"/>
   <link href="http://DianthuDia.github.com/"/>
   <updated>2013-02-16T19:33:56+09:00</updated>
   <id>http://DianthuDia.github.com/</id>
@@ -118,15 +118,15 @@ viwes/index.xml</p>
 
 <h3>テーマを追加</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/themes/blue/
-</span><span class='line'>/themes/red/
-</span><span class='line'>  styles/
-</span><span class='line'>  assets/</span></code></pre></td></tr></table></div></figure>
+<p>```
+/themes/blue/
+/themes/red/</p>
 
+<pre><code>styles/
+assets/
+</code></pre>
+
+<p>```</p>
 
 <p>/config.json
 にiOSやAndroidで何を使うか定義できる</p>
@@ -137,17 +137,16 @@ viwes/index.xml</p>
 
 <p>miniアプリケーションといえる</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/widgets/com.hoge.widget
-</span><span class='line'>  /assets
-</span><span class='line'>  /controllers/widget.js
-</span><span class='line'>  ...
-</span><span class='line'>  /widget.json // メタデータ記述</span></code></pre></td></tr></table></div></figure>
+<p>```
+/widgets/com.hoge.widget</p>
 
+<pre><code>/assets
+/controllers/widget.js
+...
+/widget.json // メタデータ記述
+</code></pre>
+
+<p>```</p>
 
 <h3>データ永続化</h3>
 
@@ -155,18 +154,11 @@ viwes/index.xml</p>
 <li>backbone.jsが使われる</li>
 <li>backborn <code>dataCollenction</code>を使って、バインディングできる</li>
 <li><p>XMLで <code>{id}``{title}</code>等を記載しておけばTableViewにバインディングされる</p></li>
-<li><p>SQL指定して取得</p></li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="err">var</span> <span class="err">mydata</span> <span class="err">=</span> <span class="err">Alloy.Collection.myModel;</span>
-</span><span class='line'><span class="err">mydata,fetch(</span><span class="p">{</span><span class="err">query:</span> <span class="err">&#39;SELECT</span> <span class="err">...&#39;)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
+<li><p>SQL指定して取得
+<code>json
+var mydata = Alloy.Collection.myModel;
+mydata,fetch({query: 'SELECT ...')
+</code></p></li>
 <li><p>dataTransformを使うと表示前にフォーマットすることができる</p></li>
 <li><p>Sync Adapter</p>
 
@@ -322,16 +314,6 @@ viwes/index.xml</p>
 <li>ステッカーゲット</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[こんにちは Octopress]]></title>
-    <link href="http://DianthuDia.github.com/blog/2012/12/10/hello-octopress/"/>
-    <updated>2012-12-10T13:40:00+09:00</updated>
-    <id>http://DianthuDia.github.com/blog/2012/12/10/hello-octopress</id>
-    <content type="html"><![CDATA[<p>かなり前から箱だけはつくっていたんですが、blog業する必要がでてきそうなんでOctopressに移行しました。
-前職で使っていたConfluenceがない今、Markdownだけが生きがいです。</p>
 ]]></content>
   </entry>
   

@@ -9,9 +9,9 @@
   <meta name="author" content="DianthuDia">
 
   
-  <meta name="description" content="かなり前から箱だけはつくっていたんですが、blog業する必要がでてきそうなんでOctopressに移行しました。
-前職で使っていたConfluenceがない今、Markdownだけが生きがいです。
-">
+  <meta name="description" content="tiTokyo参加したので、メモを投稿します keynote SDK 3.1 2013Q3 Alloyのアシスト機能とデバッグ
+コードアナライザ 他の環境で動かないなどをチェック アプリ起動しながらの編集
+新しいListAPI DeveloperBlogにかいてる &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +84,345 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2013/02/16/titokyo/">tiTokyo参加しました</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-16T14:45:00+09:00" pubdate data-updated="true">2013-02-16</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>tiTokyo参加したので、メモを投稿します</p>
+
+<h2>keynote</h2>
+
+<h3>SDK 3.1  2013Q3</h3>
+
+<ul>
+<li>Alloyのアシスト機能とデバッグ</li>
+<li>コードアナライザ
+
+<ul>
+<li>他の環境で動かないなどをチェック</li>
+</ul>
+</li>
+<li>アプリ起動しながらの編集</li>
+<li>新しいListAPI
+
+<ul>
+<li>DeveloperBlogにかいてる</li>
+</ul>
+</li>
+<li><p>ビルドと実行時のパフォーマンス向上</p></li>
+<li><p>30個のモジュールを公開した
+titanium_modues</p></li>
+</ul>
+
+
+<h3>注目のプロダクト</h3>
+
+<ul>
+<li><p>Ti Package Manager (TPM)</p>
+
+<ul>
+<li>tipm/tipm</li>
+</ul>
+</li>
+<li><p>Foundry22</p>
+
+<ul>
+<li>クラウドで自動化していく</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>ACS</h3>
+
+<p>500万回/月 まで無料</p>
+
+<p>無料版のTiはTitanium Cloudって名前になるかも</p>
+
+<hr />
+
+<h2>継続的なテスト環境</h2>
+
+<p>CEO Tom Lounibos</p>
+
+<p>SOASTA (TouchTest)
+* テストの自動化、CD
+* テストの記録と再生</p>
+
+<p>mPulse
+* ユーザーの情報をリアルタイムトラッキング</p>
+
+<h2>つながる車の世界</h2>
+
+<p>デンソー</p>
+
+<h3>デンソーとは</h3>
+
+<ul>
+<li>部品だけでなく関連のIC</li>
+<li>QRコード</li>
+<li><p>デジタル地図のカーナビ</p></li>
+<li><p>デンソーギャラリー （土曜日月1回）</p></li>
+<li><p>事故原因</p>
+
+<ul>
+<li>5割が発見遅れ</li>
+</ul>
+</li>
+<li><p>HUDで車線や速度表示</p></li>
+<li>ドライバの顔認識して寝そうだったら起こす</li>
+</ul>
+
+
+<hr />
+
+<h2>Appclerator Deep Dive</h2>
+
+<h3>Alloy</h3>
+
+<p>3ファイルで構成される</p>
+
+<p>controller/index.js
+styles/index.tss
+viwes/index.xml</p>
+
+<h3>テーマを追加</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/themes/blue/
+</span><span class='line'>/themes/red/
+</span><span class='line'>  styles/
+</span><span class='line'>  assets/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>/config.json
+にiOSやAndroidで何を使うか定義できる</p>
+
+<p>positionやサイズ、画像などもテーマ切替でできる</p>
+
+<h3>widget</h3>
+
+<p>miniアプリケーションといえる</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/widgets/com.hoge.widget
+</span><span class='line'>  /assets
+</span><span class='line'>  /controllers/widget.js
+</span><span class='line'>  ...
+</span><span class='line'>  /widget.json // メタデータ記述</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>データ永続化</h3>
+
+<ul>
+<li>backbone.jsが使われる</li>
+<li>backborn <code>dataCollenction</code>を使って、バインディングできる</li>
+<li><p>XMLで <code>{id}``{title}</code>等を記載しておけばTableViewにバインディングされる</p></li>
+<li><p>SQL指定して取得</p></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="err">var</span> <span class="err">mydata</span> <span class="err">=</span> <span class="err">Alloy.Collection.myModel;</span>
+</span><span class='line'><span class="err">mydata,fetch(</span><span class="p">{</span><span class="err">query:</span> <span class="err">&#39;SELECT</span> <span class="err">...&#39;)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><p>dataTransformを使うと表示前にフォーマットすることができる</p></li>
+<li><p>Sync Adapter</p>
+
+<ul>
+<li>ローカルのストレージとリモートのDBを同期</li>
+</ul>
+</li>
+<li><p>Migration機能</p></li>
+<li><p>Alloyのコンテンツ・アシストはTiStudio nightly buildいれれば使える</p>
+
+<ul>
+<li>3.1から</li>
+</ul>
+</li>
+<li><p><a href="http://github.com/ricardoalcocer">本日のサンプル</a></p></li>
+</ul>
+
+
+<hr />
+
+<h2>ゲストプレゼンテーション - LANICA</h2>
+
+<ul>
+<li>これを聞きに来ました</li>
+<li>Animoでお世話になっています</li>
+</ul>
+
+
+<h3>LANICA</h3>
+
+<ul>
+<li><p>去年のCODESTRONG 2012で発表された会社</p></li>
+<li><p>CARLOS M ICAZA</p>
+
+<ul>
+<li>ADOBEやFlash Lite、特にFlashはマネージャーで関わっていた</li>
+<li>CoronaSDKの元CEO</li>
+<li>SVでCEOを2回やるのは、すごく尊敬されること</li>
+</ul>
+</li>
+<li><p>メンバーは10数人</p>
+
+<ul>
+<li>Adobe, Macromedia出身の人が半分</li>
+<li>残りはアンスカモバイルから</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>Platino</h3>
+
+<ul>
+<li>Box2D</li>
+<li>Particles</li>
+<li>Shaders</li>
+<li>2.5D
+
+<ul>
+<li>パラッパラッパーみたいなの</li>
+<li>3D回転とかを1枚の画像でできる</li>
+</ul>
+</li>
+<li>Isometric Engine (昔のシムシティ)</li>
+<li>Sprite Sheets</li>
+</ul>
+
+
+<h3>ゲームもPCからモバイルへ</h3>
+
+<ul>
+<li>Zyungaもスイッチに失敗して1年そこらで衰退した</li>
+<li>大手ゲーム会社が参入してきて、ベンチャー企業では難しい</li>
+<li>そこでTi+Platino</li>
+</ul>
+
+
+<h3>質問</h3>
+
+<ul>
+<li>フリーと有料版を予定</li>
+<li><p>有料版はShaderが使える予定</p>
+
+<ul>
+<li>Unityよりは安い予定</li>
+</ul>
+</li>
+<li><p>マルチタップをサポートしている</p></li>
+<li><p>飛行機などのオブジェクトはタップできるか</p>
+
+<ul>
+<li>サポート予定はない</li>
+<li>必要ならBetaプログラムに提案して</li>
+</ul>
+</li>
+<li><p>音楽たくさん流して止まらないか？</p></li>
+<li><p>独自実装をしている</p>
+
+<ul>
+<li>iOSはOpenAL</li>
+<li>AndroidはOpenSL</li>
+<li>SVで著名なエンジニアが改良中</li>
+</ul>
+</li>
+<li><p>Native UIと共存可能</p></li>
+<li><p>但しゲームシーンと共存するとパフォーマンスが劣化する</p>
+
+<ul>
+<li>設定画面とかでは使える</li>
+<li>ゲームの中でチェックボックスを撃ち落としたいとか</li>
+</ul>
+</li>
+<li><p>iOSとAndroidで提供される機能は同じ</p></li>
+</ul>
+
+
+<hr />
+
+<h2>ユーザー会 Q&amp;A</h2>
+
+<ul>
+<li><p>Alloyを常に推奨していくか</p>
+
+<ul>
+<li>あくまでオプションの一つ</li>
+<li>できれば使った方がいい</li>
+</ul>
+</li>
+<li><p>widgetやsyncアダプターを共有する場所をはやく用意する</p></li>
+<li><p>Backborn.js 形式のon / off /trigger が消えたのはパフォーマンスのため</p></li>
+<li><p>今回のスライドは翻訳版が公開される</p></li>
+<li><p>Alloyデザイナを作る予定はいまのところない</p>
+
+<ul>
+<li>TPM作っている人がPhotoshopからエクスポートできるツールを作っている</li>
+<li>実際は難しそう。デモで動いても、実務で作れるか</li>
+</ul>
+</li>
+<li><p>Pキー制約や<code>NOT NULL</code>制約がつけられる（はず）</p></li>
+<li><p>Titanium Desktopは別の名前になる</p></li>
+</ul>
+
+
+<hr />
+
+<h2>懇親会</h2>
+
+<ul>
+<li>すごい豪華な食事</li>
+<li>LTはほんとうに楽しい</li>
+<li>話してくれた皆さまありがとう</li>
+<li>Tシャツゲット</li>
+<li>ステッカーゲット</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2012/12/10/hello-octopress/">こんにちは Octopress</a></h1>
     
     
@@ -127,6 +466,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/02/16/titokyo/">tiTokyo参加しました</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/12/10/hello-octopress/">こんにちは Octopress</a>
@@ -191,7 +534,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - DianthuDia -
+  Copyright &copy; 2013 - DianthuDia -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
