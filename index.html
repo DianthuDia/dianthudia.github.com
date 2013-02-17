@@ -1,94 +1,150 @@
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Dia's Navigation Logs</title>
-  <meta name="author" content="DianthuDia">
+	<meta charset="utf-8">
+	<title>Dia's Navigation Logs</title>
+	<meta name="author" content="DianthuDia">
 
-  
-  <meta name="description" content="tiTokyo参加したので、メモを投稿します keynote SDK 3.1 2013Q3 Alloyのアシスト機能とデバッグ
-コードアナライザ 他の環境で動かないなどをチェック アプリ起動しながらの編集
-新しいListAPI DeveloperBlogにかいてる &hellip;">
-  
+	
+	<meta name="description" content=" tiTokyo参加したので、メモを投稿します 続きを読む ">
+	
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
-  <link rel="canonical" href="http://b.dmap.tk/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="Dia's Navigation Logs" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+	<link href="/atom.xml" rel="alternate" title="Dia's Navigation Logs" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://b.dmap.tk/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
-  
   <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-2941796-8']);
-    _gaq.push(['_trackPageview']);
-
     (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+      var s = document.createElement('script');
+      s.src = 'http://s.hatena.ne.jp/js/HatenaStar.js';
+      s.async = true;
+      s.onload = function () {
+        (function() {
+          var base = Hatena.Star.EntryLoader.getElementByConfigSelector;
+          Hatena.Star.EntryLoader.getElementByConfigSelector = function(selector, parent) {
+            var links, n, i, link, a;
+            if (selector == 'link[rel="canonical"]') {
+              links = document.getElementsByTagName('link');
+              for (i = 0, n = links.length; i < n; ++i) {
+                link = links[i];
+                if (link.rel == 'canonical') {
+                  a = document.createElement('a');
+                  a.setAttribute('href', link.href);
+                  return a.cloneNode(false);
+                }
+              }
+            }
+            else {
+              return base(selector, parent);
+            }
+            return null;
+          };
+        })();
+        Hatena.Star.Token = 'ef9bb48c4dd95a3057043f5870f55de2036ba953';
+        Hatena.Star.SiteConfig = {
+          entryNodes: {
+            '#content article': {
+              uri: 'link[rel="canonical"]',
+              title: 'h1',
+              container: 'h1'
+            }
+          }
+        };
+      };
+      document.getElementsByTagName('head')[0].appendChild(s);
+    }());
   </script>
+
 
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		document.write("<img src='http://www.gravatar.com/avatar/" + MD5("dianthudia@y7mail.com") + "?s=160' alt='Profile Picture' style='width: 160px;'");
+	</script>
+</div>
+<h1><a href="/">Dia's Navigation Logs</a></h1>
+<p class="subtitle">Being Myself, Being Yourself</p>
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/DianthuDia" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/DianthuDia" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+<hgroup>
   <h1><a href="/">Dia's Navigation Logs</a></h1>
   
     <h2>Being Myself, Being Yourself</h2>
   
 </hgroup>
 
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:b.dmap.tk" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+<div id="banner" class="inner">
+	<div class="container">
+		<ul class="feed"></ul>
+	</div>
+	<small><a href="http://twitter.com/DianthuDia">DianthuDia</a> @ <a href="http://twitter.com">Twitter</a></small>
+	<div class="loading">Loading...</div>
+</div>
+<script src="/javascripts/twitter.js"></script>
+<script type="text/javascript">
+	(function($){
+		$('#banner').getTwitterFeed('DianthuDia', 4, false);
+	})(jQuery);
+</script>
 
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/16/titokyo/">tiTokyo参加しました</a></h1>
-    
-    
-      <p class="meta">
-        
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
 
 
 
@@ -100,483 +156,111 @@
   
 
 
-<time datetime="2013-02-16T14:45:00+09:00" pubdate data-updated="true">2013-02-16</time>
-        
-      </p>
-    
-  </header>
+<time datetime="2013-02-16T14:45:00+09:00" pubdate data-updated="true">2013-02-16</time></div>
+		<div class="tags">
 
 
-  <div class="entry-content"><p>tiTokyo参加したので、メモを投稿します</p>
+	<a class='category' href='/blog/categories/titanium/'>Titanium</a>
 
-<h2>keynote</h2>
-
-<h3>SDK 3.1  2013Q3</h3>
-
-<ul>
-<li>Alloyのアシスト機能とデバッグ</li>
-<li>コードアナライザ
-
-<ul>
-<li>他の環境で動かないなどをチェック</li>
-</ul>
-</li>
-<li>アプリ起動しながらの編集</li>
-<li>新しいListAPI
-
-<ul>
-<li>DeveloperBlogにかいてる</li>
-</ul>
-</li>
-<li><p>ビルドと実行時のパフォーマンス向上</p></li>
-<li><p>30個のモジュールを公開した
-titanium_modues</p></li>
-</ul>
-
-
-<h3>注目のプロダクト</h3>
-
-<ul>
-<li><p>Ti Package Manager (TPM)</p>
-
-<ul>
-<li>tipm/tipm</li>
-</ul>
-</li>
-<li><p>Foundry22</p>
-
-<ul>
-<li>クラウドで自動化していく</li>
-</ul>
-</li>
-</ul>
-
-
-<h3>ACS</h3>
-
-<p>500万回/月 まで無料</p>
-
-<p>無料版のTiはTitanium Cloudって名前になるかも</p>
-
-<hr />
-
-<h2>継続的なテスト環境</h2>
-
-<p>CEO Tom Lounibos</p>
-
-<p>SOASTA (TouchTest)
-* テストの自動化、CD
-* テストの記録と再生</p>
-
-<p>mPulse
-* ユーザーの情報をリアルタイムトラッキング</p>
-
-<h2>つながる車の世界</h2>
-
-<p>デンソー</p>
-
-<h3>デンソーとは</h3>
-
-<ul>
-<li>部品だけでなく関連のIC</li>
-<li>QRコード</li>
-<li><p>デジタル地図のカーナビ</p></li>
-<li><p>デンソーギャラリー （土曜日月1回）</p></li>
-<li><p>事故原因</p>
-
-<ul>
-<li>5割が発見遅れ</li>
-</ul>
-</li>
-<li><p>HUDで車線や速度表示</p></li>
-<li>ドライバの顔認識して寝そうだったら起こす</li>
-</ul>
-
-
-<hr />
-
-<h2>Appclerator Deep Dive</h2>
-
-<h3>Alloy</h3>
-
-<p>3ファイルで構成される</p>
-
-<p>controller/index.js
-styles/index.tss
-viwes/index.xml</p>
-
-<h3>テーマを追加</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/themes/blue/
-</span><span class='line'>/themes/red/
-</span><span class='line'>  styles/
-</span><span class='line'>  assets/</span></code></pre></td></tr></table></div></figure>
-
-
-<p>/config.json
-にiOSやAndroidで何を使うか定義できる</p>
-
-<p>positionやサイズ、画像などもテーマ切替でできる</p>
-
-<h3>widget</h3>
-
-<p>miniアプリケーションといえる</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/widgets/com.hoge.widget
-</span><span class='line'>  /assets
-</span><span class='line'>  /controllers/widget.js
-</span><span class='line'>  ...
-</span><span class='line'>  /widget.json // メタデータ記述</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>データ永続化</h3>
-
-<ul>
-<li>backbone.jsが使われる</li>
-<li>backborn <code>dataCollenction</code>を使って、バインディングできる</li>
-<li><p>XMLで <code>{id}``{title}</code>等を記載しておけばTableViewにバインディングされる</p></li>
-<li><p>SQL指定して取得</p></li>
-</ul>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="err">var</span> <span class="err">mydata</span> <span class="err">=</span> <span class="err">Alloy.Collection.myModel;</span>
-</span><span class='line'><span class="err">mydata,fetch(</span><span class="p">{</span><span class="err">query:</span> <span class="err">&#39;SELECT</span> <span class="err">...&#39;)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><p>dataTransformを使うと表示前にフォーマットすることができる</p></li>
-<li><p>Sync Adapter</p>
-
-<ul>
-<li>ローカルのストレージとリモートのDBを同期</li>
-</ul>
-</li>
-<li><p>Migration機能</p></li>
-<li><p>Alloyのコンテンツ・アシストはTiStudio nightly buildいれれば使える</p>
-
-<ul>
-<li>3.1から</li>
-</ul>
-</li>
-<li><p><a href="http://github.com/ricardoalcocer">本日のサンプル</a></p></li>
-</ul>
-
-
-<hr />
-
-<h2>ゲストプレゼンテーション - LANICA</h2>
-
-<ul>
-<li>これを聞きに来ました</li>
-<li>Animoでお世話になっています</li>
-</ul>
-
-
-<h3>LANICA</h3>
-
-<ul>
-<li><p>去年のCODESTRONG 2012で発表された会社</p></li>
-<li><p>CARLOS M ICAZA</p>
-
-<ul>
-<li>ADOBEやFlash Lite、特にFlashはマネージャーで関わっていた</li>
-<li>CoronaSDKの元CEO</li>
-<li>SVでCEOを2回やるのは、すごく尊敬されること</li>
-</ul>
-</li>
-<li><p>メンバーは10数人</p>
-
-<ul>
-<li>Adobe, Macromedia出身の人が半分</li>
-<li>残りはアンスカモバイルから</li>
-</ul>
-</li>
-</ul>
-
-
-<h3>Platino</h3>
-
-<ul>
-<li>Box2D</li>
-<li>Particles</li>
-<li>Shaders</li>
-<li>2.5D
-
-<ul>
-<li>パラッパラッパーみたいなの</li>
-<li>3D回転とかを1枚の画像でできる</li>
-</ul>
-</li>
-<li>Isometric Engine (昔のシムシティ)</li>
-<li>Sprite Sheets</li>
-</ul>
-
-
-<h3>ゲームもPCからモバイルへ</h3>
-
-<ul>
-<li>Zyungaもスイッチに失敗して1年そこらで衰退した</li>
-<li>大手ゲーム会社が参入してきて、ベンチャー企業では難しい</li>
-<li>そこでTi+Platino</li>
-</ul>
-
-
-<h3>質問</h3>
-
-<ul>
-<li>フリーと有料版を予定</li>
-<li><p>有料版はShaderが使える予定</p>
-
-<ul>
-<li>Unityよりは安い予定</li>
-</ul>
-</li>
-<li><p>マルチタップをサポートしている</p></li>
-<li><p>飛行機などのオブジェクトはタップできるか</p>
-
-<ul>
-<li>サポート予定はない</li>
-<li>必要ならBetaプログラムに提案して</li>
-</ul>
-</li>
-<li><p>音楽たくさん流して止まらないか？</p></li>
-<li><p>独自実装をしている</p>
-
-<ul>
-<li>iOSはOpenAL</li>
-<li>AndroidはOpenSL</li>
-<li>SVで著名なエンジニアが改良中</li>
-</ul>
-</li>
-<li><p>Native UIと共存可能</p></li>
-<li><p>但しゲームシーンと共存するとパフォーマンスが劣化する</p>
-
-<ul>
-<li>設定画面とかでは使える</li>
-<li>ゲームの中でチェックボックスを撃ち落としたいとか</li>
-</ul>
-</li>
-<li><p>iOSとAndroidで提供される機能は同じ</p></li>
-</ul>
-
-
-<hr />
-
-<h2>ユーザー会 Q&amp;A</h2>
-
-<ul>
-<li><p>Alloyを常に推奨していくか</p>
-
-<ul>
-<li>あくまでオプションの一つ</li>
-<li>できれば使った方がいい</li>
-</ul>
-</li>
-<li><p>widgetやsyncアダプターを共有する場所をはやく用意する</p></li>
-<li><p>Backborn.js 形式のon / off /trigger が消えたのはパフォーマンスのため</p></li>
-<li><p>今回のスライドは翻訳版が公開される</p></li>
-<li><p>Alloyデザイナを作る予定はいまのところない</p>
-
-<ul>
-<li>TPM作っている人がPhotoshopからエクスポートできるツールを作っている</li>
-<li>実際は難しそう。デモで動いても、実務で作れるか</li>
-</ul>
-</li>
-<li><p>Pキー制約や<code>NOT NULL</code>制約がつけられる（はず）</p></li>
-<li><p>Titanium Desktopは別の名前になる</p></li>
-</ul>
-
-
-<hr />
-
-<h2>懇親会</h2>
-
-<ul>
-<li>すごい豪華な食事</li>
-<li>LTはほんとうに楽しい</li>
-<li>話してくれた皆さまありがとう</li>
-<li>Tシャツゲット</li>
-<li>ステッカーゲット</li>
-</ul>
 
 </div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2013/02/16/titokyo/">tiTokyo参加しました</a></h1>
+	<div class="entry-content">
+		<p>tiTokyo参加したので、メモを投稿します</p>
+
+
+		
+		<a href="/blog/2013/02/16/titokyo/" class="more-link">続きを読む</a>
+	</div>
+
+</article>
+
+
+    <article class="post">
+	<div class="meta">
+		<div class="date">
+
+
+
+
+
+
+
+
   
-  
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/12/10/hello-octopress/">こんにちは Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
+<time datetime="2012-12-10T13:40:00+09:00" pubdate data-updated="true">2012-12-10</time></div>
+		<div class="tags">
 
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-10T13:40:00+09:00" pubdate data-updated="true">2012-12-10</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>かなり前から箱だけはつくっていたんですが、blog業する必要がでてきそうなんでOctopressに移行しました。
+</div>
+		
+	</div>
+	<h1 class="title"><a href="/blog/2012/12/10/hello-octopress/">こんにちは Octopress</a></h1>
+	<div class="entry-content">
+		<p>かなり前から箱だけはつくっていたんですが、blog業する必要がでてきそうなんでOctopressに移行しました。
 前職で使っていたConfluenceがない今、Markdownだけが生きがいです。</p>
-</div>
-  
-  
 
+		
+		
+	</div>
 
-    </article>
-  
-  <div class="pagination">
+</article>
+
+<nav id="pagenavi">
     
-    <a href="/blog/archives">Blog Archives</a>
     
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/02/16/titokyo/">tiTokyo参加しました</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/12/10/hello-octopress/">こんにちは Octopress</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  
-  <a href="https://github.com/DianthuDia">@DianthuDia</a> on GitHub
-  
-  <script type="text/javascript">
-    $.domReady(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'DianthuDia',
-            count: 4,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("DianthuDia", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/DianthuDia" class="twitter-follow-button" data-show-count="false">Follow @DianthuDia</a>
-  
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+			</div>
+			<footer id="footer" class="inner"><p>
   Copyright &copy; 2013 - DianthuDia -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
-</footer>
-  
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'dmap';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-2941796-8']);
+		_gaq.push(['_trackPageview']);
 
-
-
-  <script type="text/javascript">
-    (function() {
-      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-      script.src = 'https://apis.google.com/js/plusone.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
-    })();
-  </script>
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
 
 
 
 
-
+		</div>
+	</div>
 </body>
 </html>
